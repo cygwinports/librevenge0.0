@@ -1,0 +1,12 @@
+--- origsrc/librevenge-0.0.2/docs/doxygen/Makefile.am	2013-12-21 15:31:14.000000000 -0600
++++ src/librevenge-0.0.2/docs/doxygen/Makefile.am	2015-04-21 13:24:32.752834300 -0500
+@@ -21,7 +21,8 @@ all:
+ 	test -f footer.html.in || $(LN_S) $(srcdir)/footer.html.in ./
+ 	test -f style_paragraph_properties.cfg || $(LN_S) $(srcdir)/style_paragraph_properties.cfg ./
+ 	test -f style_text_properties.cfg || $(LN_S) $(srcdir)/style_text_properties.cfg ./
+-	doxygen $(srcdir)/doxygen.cfg
++	test -f doxygen.cfg || $(SED) -e "s|\.\./\.\./|$(top_srcdir)/|g" $(srcdir)/doxygen.cfg > doxygen.cfg
++	doxygen doxygen.cfg
+ 
+ else
+ 
