@@ -1,8 +1,8 @@
 inherit python
 
 NAME="librevenge0.0"
-VERSION=0.0.2
-RELEASE=3
+VERSION=0.0.4
+RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Base library for document import filters"
 DESCRIPTION="librevenge is a base library for writing document import filters.
