@@ -1,8 +1,8 @@
-inherit python
+inherit python2
 
 NAME="librevenge0.0"
 VERSION=0.0.4
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Base library for document import filters"
 DESCRIPTION="librevenge is a base library for writing document import filters.
@@ -31,7 +31,5 @@ src_install() {
 	mv ${D}/usr/share/gdb/auto-load/usr/lib/librevenge-stream-0.0.py \
 	   ${D}/usr/share/gdb/auto-load/usr/bin/cygrevenge-stream-0.0-0.dll-gdb.py
 
-	python_optimize /usr/share/librevenge/python
+	python2_optimize /usr/share/librevenge/python
 }
-
-KEEP_LA_FILES="none"
